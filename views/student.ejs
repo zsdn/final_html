@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+
+</head>
+
+<body>
+    <div class="container py-3 ">
+        <div class="row">
+            <div class="col-md-5 col-sm-12 ">
+                <img alt="Red Lantern logo" src="images/rl_logo.png" />
+            </div>
+            <div class="col-md-7 col-sm-12 pt-4  ">
+                <ul class="nav justify-content-end ">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Protfolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <% student.forEach(function(item){ %>
+            <div class="col-sm-4">
+                <!-- Card Wider -->
+                <div class="card card-cascade wider">
+
+                    <!-- Card image -->
+                    <div class="view view-cascade overlay">
+                        <img class="card-img-top" src="images/<%= item.img %>.png"
+                            alt="Card image cap">
+                    </div>
+
+                    <!-- Card content -->
+                    <div class="card-body card-body-cascade text-center">
+
+                        <!-- Title -->
+                        <h4 class="card-title"><strong><%= item.name %></strong></h4>
+                        <!-- Subtitle -->
+                        <h5 class="blue-text pb-2"><strong><%= item.id %></strong></h5>
+                        <!-- Text -->
+                        <p class="card-text">Sed ut perspiciatis unde omnis iste natus sit voluptatem accusantium
+                            doloremque
+                            laudantium, totam rem aperiam. </p>
+
+                        <button>Profile</button>
+                    </div>
+
+                </div>
+                <!-- Card Wider -->
+            </div>
+            <% }) %>
+        </div>
+    </div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

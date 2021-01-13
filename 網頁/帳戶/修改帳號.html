@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html land="en">
+
+<head>
+  <title>註冊頁面</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link href="styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <div id="another_bg">
+    <!-- <div><img src="images/combined.png" alt="上面的條" width="100%"></div> -->
+    <nav class="navbar navbar-expand-sm bg-light">
+      <ul class="navbar-nav">
+        <li id="line">｜</li>
+        <li class="nav-item">
+          <a class="nav-link" href="/index">食魂</a>
+        </li>
+        <li id="line">｜</li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">膳具</a>
+        </li>
+        <li id="line">｜</li>
+      </ul>
+    </nav>
+
+    <div id="bg_circle" class="container border">
+      <div id="space">
+        <div class="container border" id="userpage">
+
+          <h2 style="color:rgb(0, 0, 0);">修改帳戶</h2>
+          <form method="post" action="/add" encType="multipart/form-data">
+
+            帳號: <input class="form-control" type="text" name="account" id="account" placeholder="輸入帳號" maxlength="20"
+              required> <br>
+
+            密碼: <input class="form-control" type="password" name="pwd" id="pwd" placeholder="輸入密碼" maxlength="20"
+              required>
+            <br>
+
+            <!-- ID: <select class="form-control" name="id" id="id">
+    <option value="" selected disabled hidden>Choose your ID</option>
+    <option value="s1310934012">1310934012 陳喬蓉</option>	
+    <option value="s1310934032">1310934032 林明德</option>	
+    </select> -->
+
+            <!-- Author: <input class="form-control" type="text" name="author" id="author" placeholder="創作者" readonly><br> -->
+
+            <!-- Poster (800x400 px, Maximum 200Kb): <input class="form-control-file" type="file" name="poster" required><br>
+    Game file (.zip): Please upload it when this game data created successfully.<br><br>  -->
+
+            <!-- <div class="form-group form-check">
+              <label class="form-check-label">
+                <input class="form-check-input" type="checkbox" name="rememberme"> 記住帳密 </input>
+              </label>
+            </div> -->
+
+            <button type="submit" class="btn btn-primary" value="Submit">登入</button>
+
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+<!-- <script>
+  $(function(){
+    $("#id").change(function(){
+      var idx=this.selectedIndex+1;
+      var selected = $("#id option:nth-child("+idx+")").html();
+      var name=selected.split(' ')[1];
+      //console.log(name);
+      $("#author").val(name);
+    })
+    
+  })
+</script> -->
+
+</html>

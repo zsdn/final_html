@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食物語角色頁面</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div id="bg">
+        <!-- <div><img src="images/combined.png" alt="上面的條" width="100%"></div> -->
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="navbar-nav">
+              <li id="line">｜</li>
+              <li class="nav-item">
+                <a class="nav-link" href="index">食魂</a>
+              </li>
+              <li id="line">｜</li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">膳具</a>
+              </li>
+              <li id="line">｜</li>
+            </ul>
+          </nav>
+        <div class="container border">
+         <!-- SSR -->
+
+        <div id="stand" class="row border">
+            <div class="col-md-12 col-lg-7  border" style="background-image: url('images/body/<%= name %>.png');background-repeat: no-repeat; background-size: cover;">
+                <a href="index.html#SSR"><img src="images/SSR.png" style="padding-bottom:540px;padding-right:350px;padding-top:40px;"></a>
+            </div>
+
+            <div id="info" class="col-md-12 col-lg-5 mt-4 mb-3 pt-4 border">
+                <!-- <img src="images/框.png" id="P1" > -->
+                <p><%= name %> cv:<%= cv %> 特性:<%= feature %></p><br>
+                <p>生命:<%= hp %> 暴擊:<%= crit %></p><br>
+                <p>攻擊:<%= atk %> 暴傷:<%= crit_atk %></p><br>
+                <p>防禦:<%= def %> 閃避:<%= miss %></p>
+                <div class="row border">
+                    <div class="mr-2 mt-3 border"><img src="images/技能/1技.png" alt="佛跳牆" title="佛跳牆"></div>
+                    <div class="mr-2 mt-3 border"><img src="images/技能/2技.png" alt="佛跳牆" title="佛跳牆"></div>
+                    <div class="mr-2 mt-3 border"><img src="images/技能/3技.png" alt="佛跳牆" title="佛跳牆"></div>
+                    <div class="mr-2 mt-3 border"><img src="images/技能/4技.png" alt="佛跳牆" title="佛跳牆"></div>
+                </div>
+                <div class="row border">
+                    <p style="writing-mode:vertical-lr; ">禮物</p>
+                    <img src="images/材料/禮物.png">
+                    <p style="writing-mode:vertical-lr; ">湯藥</p>
+                    <img src="images/材料/湯藥.png">
+                    <p style="writing-mode:vertical-lr; ">升星材料</p>
+                    <img src="images/材料/材料1.png">
+                    <img src="images/材料/材料2.png">
+                </div>
+            </div>
+        </div>
+        <!-- info -->    
+        <div class="container border">
+            <div id="logo">
+                <h2>freecss_jqueryblock</h2>
+                <h2>Small Company Slogan Goes Here</h2>
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

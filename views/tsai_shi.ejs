@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食物語角色頁面</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link href="turtle_styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div id="another_bg">
+        <!-- <div><img src="images/combined.png" alt="上面的條" width="100%"></div> -->
+        <nav class="navbar navbar-expand-sm bg-light2">
+                
+            <ul class="navbar-nav ">
+                  <li id="line">｜</li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/index">食魂</a>
+                  </li>
+                  <li id="line">｜</li>
+                  <li class="nav-item ">
+                    <a class="nav-link" href="/weapon.html">膳具</a>
+                  </li>
+                  <li id="line">｜</li>
+                  <li class="nav-item ">
+                    <a class="nav-link " href="/board">討論區</a>
+                  </li>
+                  <li id="line">｜</li>
+                  
+                  <ul class="navbar-nav ">
+                    <li id="line">｜</li>
+                    <li class="nav-item ">
+                      <a class="nav-link" href="/login.html">登入</a>
+                    </li>
+                    <li id="line">｜</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="/register.html">註冊</a>
+                    <li id="line">｜</li>
+                      </li>
+                    </ul>
+         </nav>
+
+        <div class="container border">
+            <form method="post" action="/character_info" encType="multipart/form-data">
+                <div id="logo" class="container mr-5 pr-5 border">
+                    <a href="/index" style="text-align: right;"><img src="images/菜系按鈕.png"  width="15%"></a>
+                </div>
+                <!-- 普 -->
+                <div class="container border">
+                    <div id="普" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/1分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "普"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 魯 -->
+                <div class="container border">
+                    <div id="魯" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/2分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "魯"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 浙 -->
+                <div class="container border">
+                    <div id="浙" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/3分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "浙"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 蘇  -->
+                <div class="container border">
+                    <div id="蘇" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/4分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "蘇"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 閩 -->
+                <div class="container border">
+                    <div id="閩" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/5分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "閩"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 粵  -->
+                <div class="container border">
+                    <div id="粵" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/6分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "粵"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 川  -->
+                <div class="container border">
+                    <div id="川" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/7分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "川"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 湘 -->
+                <div class="container border">
+                    <div id="湘" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/8分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "湘"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 徽 -->
+                <div class="container border">
+                    <div id="徽" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/9分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "徽"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- 其他 -->
+                <div class="container border">
+                    <div id="其他" class="container ml-3 pr-5 border">
+                        <img src="images/tsai_shi/10分類條.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.tsai_shi == "其他"){%>
+                                <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                    <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                    <button type="submit"  name="name" id="<%= item.name %>" value="<%= item.name %>" style="width: 100%;background-color: #4caf4f00;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                                        background-size: cover;
+                                        border:none;
+                                        margin-left:5px;
+                                        " class="btn btn-primary"><%= item.name %></button>
+                                </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+
+            </form>
+        </div>
+
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

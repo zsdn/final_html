@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食物語角色頁面</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div id="bg">
+        <!-- <div><img src="images/combined.png" alt="上面的條" width="100%"></div> -->
+        <nav class="navbar navbar-expand-sm bg-light">
+            <ul class="navbar-nav">
+                <li id="line">｜</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/index">食魂</a>
+                </li>
+                <li id="line">｜</li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/weapon.html">膳具</a>
+                </li>
+                <li id="line">｜</li>
+            </ul>
+        </nav>
+
+        <div class="container border">
+            <form method="post" action="/character_info" encType="multipart/form-data">
+                <div id="logo" class="container mr-5 pr-5 border">
+                    <a href="tsai_shi" style="text-align: right;">菜系</a>
+                </div>
+                <!-- SSR -->
+                <div class="container border">
+                    <div id="SSR" class="container ml-3 pr-5 border">
+                        <img src="images/bar_SSR.png" alt="SSR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.rarity == "SSR"){%>
+                            <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                <button type="submit"  name="name" id="<%= item.name %>" class="btn btn-primary" value="<%= item.name %>"><%= item.name %></button>
+                            </div>
+                            <%} }) %>
+                        </div>
+                    </div>
+                </div>
+                <!-- SR -->
+                <div class="container border">
+                    <div class="container ml-3 pr-5 border">
+                        <img src="images/bar_SR.png" alt="SR_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.rarity == "SR"){ %>
+                            <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                <button type="submit"  name="name" id="<%= item.name %>" class="btn btn-primary" value="<%= item.name %>"><%= item.name %></button>
+                            </div>
+                            <%} }) %>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- R -->
+                <div class="container border">
+                    <div class="container ml-3 pr-5 border">
+                        <img src="images/bar_R.png" alt="R_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.rarity == "R"){ %>
+                            <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                <button type="submit"  name="name" id="<%= item.name %>" class="btn btn-primary" value="<%= item.name %>"><%= item.name %></button>
+                            </div>
+                            <%} }) %>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- N -->
+                <div class="container border">
+                    <div class="container ml-3 pr-5 border">
+                        <img src="images/bar_N.png" alt="N_bar" width="100%">
+                    </div>
+                    <div class="container ml-5 pb-5 border">
+                        <div class="row">
+                            <% character.forEach(function(item){if(item.rarity == "N"){ %>
+                            <div class="col-sm-6 col-md-4 col-lg-2 mr-5 mb-3 border">
+                                <img src="images/head/<%= item.name %>.png" alt="" title="" />
+                                <button type="submit"  name="name" id="<%= item.name %>" class="btn btn-primary" value="<%= item.name %>"><%= item.name %></button>
+                            </div>
+                            <%} }) %>
+                        </div>
+
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

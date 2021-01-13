@@ -1,0 +1,303 @@
+#bg {
+	background-image: url(images/bg2.jpg);
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	/* background-attachment: scroll; */
+	background-attachment: fixed;
+	background-size: cover;
+	
+}
+
+#another_bg {
+	background-image: url(images/bg1.jpg);
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	/* background-attachment: scroll; */
+	background-attachment: fixed;
+	background-size: cover;
+	text-align: left;
+	
+}
+#bg_circle {
+	background-image: url(images/circle.png);
+	background-repeat: no-repeat;
+	/* background-size: auto; */
+	/* background-attachment: fixed; */
+	/* background-attachment: scroll; */
+	/* background-size: cover; */
+	background-size: 1000px 750px;
+	/* text-align: left; */
+
+	
+}
+/* 登錄頁面的空格 */
+#space{
+	margin-top:250px;
+	margin-bottom:270px;
+	/* text-align: center; */
+
+}
+#space_2{
+	margin-top:200px;
+	margin-bottom:216px;
+	/* text-align: center; */
+
+}
+
+
+.border {
+    border: 2px solid #3f333300!important;
+}
+
+
+#title.container{
+	text-align: center;
+}
+
+#userpage{
+
+	width:500px;
+	
+}
+a {
+	display: block;
+	/* text:70px; */
+  }
+/* nav */
+.bg-light {
+	background-color:#00000000!important;
+	background-image: url(images/combined1.png);
+	background-repeat: no-repeat;
+	/* background-attachment: fixed; */
+	/* background-attachment: scroll; */
+	background-size: cover;
+}
+
+.navbar {
+	/* padding: .5rem 1rem; */
+	padding-bottom: 100px;
+}
+.navbar-nav{
+	/* margin-top:40px; */
+	margin-left:500px;
+}
+a.nav-link{
+	color:rgb(94, 66, 66);
+}
+#line{
+	margin-top: 7px;
+}
+/* nav */
+/* 
+#logo div{
+	background-color: green;
+	 margin-right: 100px; 
+
+} */
+
+/* #titlebar {
+	width: 2500px;
+} */
+
+.container{
+	width: 1010px;
+	
+}
+
+#aaa.container{
+    width: 20px;
+    height: 20px ; 
+    background-color: #ffcc00;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+b{
+	color:#000000;
+	text-align: left;
+	font-size: 30px;
+
+}
+.p2{
+	color:rgb(94, 66, 66)
+}
+h5{
+	color:#00000000;
+	text-align: center;
+
+}
+h2{
+	color:#000000;
+	text-align: center;
+
+}
+.row{
+	margin-bottom: 20px;
+	margin-left:45px;
+}
+
+#head.row{
+	margin-bottom: 5px;
+	margin-left:10px;
+}
+
+#ABC.row{
+	margin-bottom: 1px;
+	margin-left:10px;
+	line-height: 45px;/*與包著的區塊設定同高度即可*/
+}
+
+
+#info{
+	background-image: url(images/框.png);
+	background-repeat: no-repeat;
+	background-size:100% 100%;
+	margin-left: -100px;
+	width: 520px;
+	height: 740px;
+
+}
+
+#stand{
+	margin-left:-60px;
+
+}
+
+#behind {
+	position: absolute;
+	left: 0px;
+	top: 0px;
+
+  }
+#round{
+	padding-top:-50;
+}
+
+
+
+
+
+/* #content_bg {
+	padding: 5px;
+} */
+@media(max-width:1000px){
+	#info{
+		margin-left:0px;
+	}
+	#stand{
+		margin-left:0px;
+		
+	}
+}
+
+.p2 {
+	font-family: Microsoft JhengHei;
+	text-align: center;
+  }
+  /*腳色介面的字*/
+  .p3 {
+	font-size: 40px;  
+	
+	font-family: Microsoft JhengHei;
+	text-align: center;
+	color:rgb(94, 66, 66)
+  }
+
+  .p4 {
+	font-size: 19px;  
+	display: table-cell;
+	vertical-align: bottom;
+	font-family: Microsoft JhengHei;
+	text-align: center;
+	color:rgb(94, 66, 66);
+  }
+
+
+  
+ .p5 {
+	font-size: 25px;  
+	display: table-cell;
+	vertical-align: bottom;
+	font-family: Microsoft JhengHei;
+	text-align: center;
+	color:rgb(94, 66, 66)
+  }
+  /*腳色介面的字的顏色*/
+  /*S*/
+  .p6 {
+	font-size: 25px;  
+	display: table-cell;
+	vertical-align: bottom;
+	font-family: Microsoft JhengHei;
+	text-align: center;
+	color:rgb(223, 192, 54)
+  }
+
+   /*A*/
+   .p7 {
+	font-size: 25px;  
+	display: table-cell;
+	vertical-align: bottom;
+	font-family: Microsoft JhengHei;
+	text-align: center;
+	color:rgb(197, 50, 82)
+  }
+
+    /*B*/
+	.p8 {
+		font-size: 25px;  
+		display: table-cell;
+		vertical-align: bottom;
+		font-family: Microsoft JhengHei;
+		text-align: center;
+		color:rgb(79, 172, 209)
+	  }
+	/*B*/
+	.p9 {
+		font-size: 25px;  
+		display: table-cell;
+		vertical-align: bottom;
+		font-family: Microsoft JhengHei;
+		text-align: center;
+		color:rgb(61, 177, 96)
+	  }
+	  
+	  .div3 {
+		  float:left; border:solid 5px #ff0000;
+		  box-align:bottom;
+	}
+  /*首頁角色*/
+
+  .no-interval{
+	padding-right:0 !important;
+	padding-left:0 !important;
+}
+
+
+.container2{
+width: 1880px;
+
+}
+
+
+#m4_space{
+margin-bottom: -20px !important;
+z-index: 1;
+
+}
+
+#m5_space{
+margin-bottom: 0px !important;
+z-index: 0;
+
+}
+
+.bg-light2 {
+background-color:#00000000!important;
+background-image: url(images/combined2.png);
+background-repeat: no-repeat;
+/* background-attachment: fixed; */
+/* background-attachment: scroll; */
+background-size: cover;
+}
+

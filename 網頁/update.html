@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>更改密碼測試</title>
+</head>
+
+<body>
+    <h1>更改密碼測試</h1>
+
+    <form method="POST" action="/register">
+        <input type="text" id="name" name="name"/>
+        <input type="password" id="password" name="password"/>
+        <input type="submit" value="登入" id="update" />
+    </form>
+
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/crypto-js.js"></script>
+ 
+ 
+    <script type="text/javascript">
+        $('#update').click(function (evt) {
+            evt.preventDefault();
+            $.ajax({
+                url: '/update',
+                type: 'POST',
+                data: {
+                    name: $('#name').val(),
+                    password: CryptoJS.SHA256($('#password').val()).toString(CryptoJS.enc.Hex)
+                },
+                success: function (data) {
+                    if (data.ret_code === 0) {
+                        console.log("Success!");
+                        window.location.href="/"; 
+                    }else if(data.ret_code === 1){
+                        alert("Account or password error!");
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>

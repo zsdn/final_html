@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>建立留言</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link href="turtle_styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+  <div id="another_bg">
+
+    <nav class="navbar navbar-expand-sm bg-light2">
+                
+      <ul class="navbar-nav ">
+        <li id="line">｜</li>
+        <li class="nav-item ">
+          <a class="nav-link" href="index">食魂</a>
+        </li>
+        <li id="line">｜</li>
+        <li class="nav-item ">
+          <a class="nav-link" href="weapon.html">膳具</a>
+        </li>
+        <li id="line">｜</li>
+        <li class="nav-item ">
+          <a class="nav-link " href="board">討論區</a>
+        </li>
+        <li id="line">｜</li>
+        
+        <ul class="navbar-nav ">
+          <li id="line">｜</li>
+          <li class="nav-item ">
+            <a class="nav-link" href="login.html">登入</a>
+          </li>
+          <li id="line">｜</li>
+          <li class="nav-item ">
+              <a class="nav-link" href="gameform.html">註冊</a>
+          <li id="line">｜</li>
+            </li>
+          </ul>
+      </ul>
+      </nav>
+
+    <div id="bg_circle" class="container border">
+      <div id="space">
+        <div class="container border" id="userpage">
+
+          
+         
+          <h2 style="color:rgb(0, 0, 0); font-family: Microsoft JhengHei; font-weight: bold; color:rgb(94, 66, 66)">留言</h2>
+          <div id="row" class="col-sm-12 col-md-3 col-lg-1 border" style="padding-bottom: 5px;"></div>
+
+
+          <form method="post"  action="/message" encType="multipart/form-data">
+          <input  class="form-control"  type="text"  id="title" name="title"  placeholder="輸入標題" maxlength="20" required> <br>
+          <input  class="form-control"  type="text" id="commet" name="commet" placeholder="輸入內文" maxlength="20" required> <br>
+            <h2 style="color:rgb(0, 0, 0); font-family: Microsoft JhengHei; font-weight: bold; color:rgb(94, 66, 66);font-size: 25px;">上傳頭像 (限PNG) </h2><br>
+          <input class="form-control-file" type="file" name="poster" required><br>
+        <br><br> 
+        <h2 style="color:rgb(0, 0, 0); font-family: Microsoft JhengHei; font-weight: bold; color:rgb(94, 66, 66);font-size: 25px;">
+          <input class="btn btn-dark" type="submit" value="留言">
+        </h2>
+          </form>
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+
+
+
+
+</html>

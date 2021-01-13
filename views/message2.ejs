@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食物語角色頁面</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.0/css/all.min.css">
+    <link href="turtle_styles.css" rel="stylesheet" type="text/css" />
+
+</head>
+
+<body>
+    <div id="bg">
+        <!-- <div><img src="images/combined.png" alt="上面的條" width="100%"></div> -->
+        <nav class="navbar navbar-expand-sm bg-light2">
+
+            <ul class="navbar-nav ">
+                <li id="line">｜</li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="index">食魂</a>
+                </li>
+                <li id="line">｜</li>
+                <li class="nav-item ">
+                    <a class="nav-link" href="weapon.html">膳具</a>
+                </li>
+                <li id="line">｜</li>
+                <li class="nav-item ">
+                    <a class="nav-link " href="board">討論區</a>
+                </li>
+                <li id="line">｜</li>
+
+                <ul class="navbar-nav ">
+                    <li id="line">｜</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="login.html">登入</a>
+                    </li>
+                    <li id="line">｜</li>
+                    <li class="nav-item ">
+                        <a class="nav-link" href="gameform.html">註冊</a>
+                    <li id="line">｜</li>
+                    </li>
+                </ul>
+            </ul>
+        </nav>
+
+
+        <div class="container border">
+
+            <!-- SSR -->
+            <form method="post" action="/message2">
+
+                <div class="container border">
+                    <div class="row border"
+                        style="background-image: url('images/整個框2.png'); background-repeat: no-repeat; background-size: 900px;">
+                        <% character.forEach(function(item){if(item.check=="big" ){%>
+                            <div class="col-md-12 col-lg-3 border">
+                                <div id="row" class="col-sm-12 col-md-3 col-lg-1 border" style="padding-bottom: 20px;">
+                                </div>
+                                <p style="padding-left: 90px; ">
+                                    <%= item.username %>
+                                </p>
+                                <img src="uploads/<%= item.username %>.png"
+                                    style="width: 170px; height: 120px;float:center; padding-left: 50px;">
+                                <div id="row" class="col-sm-12 col-md-3 col-lg-1 border" style="padding-bottom: 40px;">
+                                </div>
+
+                            </div>
+                            <div class="col-md-12 col-lg-8 border" ;>
+                                <!-- <img src="images/框.png" id="P1" > -->
+                                <div id="row" class="col-sm-12 col-md-3 col-lg-1 border" style="padding-bottom: 10px;">
+                                </div>
+                                <b style="margin-left: 30px;">
+                                    <%= item.title %>
+                                </b><br>
+                                <img src="uploads/<%= item.title %>.png"
+                                    style="width: 170px; height: 120px;float:center; padding-left: 50px;">
+                                <p style="padding-left: 30px">
+                                    <%= item.commet %>
+                                </p><br>
+                            </div>
+
+                    </div>
+                    <div class="col-md-12 col-lg-12 border" style="padding-left: 450px" ;>
+                        <div id="row" class="col-sm-12 col-md-3 col-lg-1 border" style="padding-bottom: 40px;"></div>
+                        <input type="text" id="reply" style="width: 400px;" name="reply" />
+                        <!-- <style="width: 20%;background-image: url(images/按鈕_new.png);background-repeat: no-repeat;
+                    background-size: cover;
+                    border:none;></button> -->
+                        <button type="submit" name="title" id="<%= item.title %>" class="btn btn-primary"
+                            value="<%= item.title %>"
+                            style="background-image: url(images/評論按鈕.png); background-color: #4caf4f00;background-size: cover;background-repeat: no-repeat;width: 100px;height: 46px;border:none;"></button>
+
+
+
+                    </div>
+                </div>
+                <%} }) %>
+            </form>
+            
+            <% character.forEach(function(item){if(item.check=="small" ){%>
+                <div class="container ml-5 border" style="margin-left: 50px;padding-left: 50px;">
+                    <div class="row border"
+                        style="background-image: url('images/整個框2.png'); background-repeat: no-repeat; background-size: 900px;">
+
+                        <div class="col-md-12 col-lg-3 border">
+                            <div id="row" class="col-sm-12 col-md-3 col-lg-1 border" style="padding-bottom: 10px;">
+                            </div>
+                            <p style="padding-left: 90px; ">
+                                <%= item.username %>
+                            </p>
+                            <img src="uploads/<%= item.username %>.png"
+                                style="width: 150px; height: 100px;float:center; padding-left: 40px;">
+                            <div id="row" class="col-sm-12 col-md-3 col-lg-1 border" style="padding-bottom: 60px;">
+                            </div>
+
+                        </div>
+                        <div class="col-md-12 col-lg-7 border">
+                            <div id="row" class="col-sm-12 col-md-3 col-lg-1 border" style="padding-bottom: 20px;">
+                            </div>
+                            <b style=" margin-left: 40px;">
+                                <%= item.reply %>
+                            </b><br>
+                        </div>
+                    </div>
+                </div>
+                <%} }) %>
+
+                    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </div>
+
+    </div>
+
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</html>

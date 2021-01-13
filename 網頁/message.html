@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>留言板測試</title>
+</head>
+
+<body>
+    <h1>留言板測試</h1>
+
+    <form method="POST" action="/message">
+        <!-- <p>名字</p>
+        <input type="text" id="name" name="name"/>
+        <p>密碼</p>
+        <input type="password" id="password" name="password"/> -->
+        <p>標題</p>
+        <input type="text" id="title" name="title"/>
+        <p>內容</p>
+        <input type="text" id="commet" name="commet"/>
+
+        <input type="submit" value="登入" id="message" />
+    </form>
+
+    <script type="text/javascript" src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript" src="js/crypto-js.js"></script>
+ 
+ 
+    <!-- <script type="text/javascript">
+        $('#message').click(function (evt) {
+            evt.preventDefault();
+            $.ajax({
+                url: '/message',
+                type: 'POST',
+                data: {
+                    name: $('#name').val(),
+                    password: CryptoJS.SHA256($('#password').val()).toString(CryptoJS.enc.Hex),
+                    title: $('#title').val()
+                },
+                success: function (data) {
+                    if (data.ret_code === 0) {
+                        console.log("Success!");
+                        window.location.href="/"; 
+                    }else if(data.ret_code === 1){
+                        alert("Account or password error!");
+                    }
+                }
+            });
+        });
+    </script> -->
+</body>
+
+</html>

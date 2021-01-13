@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Submit Game File</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+    
+</head>
+<style>
+  
+  body{
+	  font-family: Microsoft JhengHei;
+  }
+  form{
+    width:50%;
+    background-color:rgba(250,180,66,0.8);
+    padding:15px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 7px rgba(100, 100, 100, 0.5);
+  }
+</style>
+<body>
+ 
+  <div class="container">
+    <h1><%= id %></h1>
+    <h2>上傳遊戲壓縮檔(.zip)<br>遊戲主檔index.html須在最上層</h2>
+    <form method="post"  action="/addgamefile" encType="multipart/form-data">
+       <input class="form-control" type="hidden" name="id" value='<%= id %>' >
+       
+      Game file (.zip): <input class="form-control-file" type="file" name="gamezip" required><br>
+        
+      <input class="btn btn-danger" type="submit" value="Submit">
+    </form>
+  </div>
+ </body>
+</html>
